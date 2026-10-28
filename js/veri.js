@@ -32,35 +32,27 @@ window.ELIA = {
     googleYorumSayisi: 28,
   },
 
-  // Hero (açılış) videosu. Gerçek tanıtım videosu gelince "medya/video/tanitim.mp4" yapılır.
+  // Hero (açılış) videosu — müşterinin drone çekimi (6 Eyl 2026).
   hero: {
-    video: MK(40627, 1080),
-    videoMobil: MK(40627, 720),
-    poster: MKP(40627),
+    video: "medya/video/gun-batimi-genel.mp4",
+    videoMobil: "medya/video/gun-batimi-genel-720.mp4",
+    poster: "medya/poster/gun-batimi-genel.jpg",
   },
 
-  // İki bahçe. İsimleri müşteriden teyit edilecek.
+  // Şu an tek bahçe var. İkinci bahçe açılırsa listeye yeni öğe eklenir.
   bahceler: [
     {
-      ad: "Bahçe I",
-      etiket: "Geniş davetler",
-      metin: "Ağaçların altında, ışık zincirleriyle çevrili açık alan. Kalabalık düğün ve kına geceleri için geniş dans pisti, sahne ve oturma düzeni.",
-      ozellikler: ["Açık hava dans pisti", "Sahne ve ses sistemi", "Işıklandırılmış yürüyüş yolu"],
-      gorsel: U("1574482211311-45a2169db57c"),
-      video: MK(40590),
-    },
-    {
-      ad: "Bahçe II",
-      etiket: "Butik kutlamalar",
-      metin: "Daha samimi bir atmosfer arayanlar için yeşillikler içinde butik bahçe. Nişan, söz ve aile davetleri için ideal.",
-      ozellikler: ["Çiçek takı ve tören alanı", "Doğa manzarası", "Fotoğraf köşeleri"],
-      gorsel: U("1670529776180-60e4132ab90c"),
-      video: MK(40584),
+      ad: "Elia Garden",
+      etiket: "Dağ manzaralı kır bahçesi",
+      metin: "Yamacın üzerinde, ışık zincirleriyle çevrili açık hava bahçesi. Ortada dans pisti, etrafında masa düzeni; arkada gün batımında dağ manzarası.",
+      ozellikler: ["Işık zincirli açık hava dans pisti", "Sütunlu tören yolu ve kırmızı halı", "Dağ ve gün batımı manzarası"],
+      gorsel: "medya/galeri/gece-genel.jpg",
+      video: "medya/video/alan-yukaridan.mp4",
     },
   ],
 
   organizasyonlar: [
-    { ad: "Düğün", metin: "Işıklar altında, doğanın ortasında unutulmaz bir kır düğünü.", gorsel: U("1769230387364-8b0c2b63e18b", 900), kategori: "dugun" },
+    { ad: "Düğün", metin: "Işıklar altında, doğanın ortasında unutulmaz bir kır düğünü.", gorsel: "medya/galeri/kare-toren-kemerleri.jpg", kategori: "dugun" },
     { ad: "Kına Gecesi", metin: "Geleneksel kına gecenizi bahçenin sıcak atmosferinde yaşayın.", gorsel: U("1768611873658-5f041a413341", 900), kategori: "kina" },
     { ad: "Nişan & Söz", metin: "Aileniz ve sevdiklerinizle butik, zarif bir nişan töreni.", gorsel: U("1764593821636-0b40b6ec25e6", 900), kategori: "nisan" },
     { ad: "Sünnet Düğünü", metin: "Çocuklar için geniş, güvenli alan; misafirler için keyifli bir gün.", gorsel: U("1578298880489-ff269cea9894", 900), kategori: "sunnet" },
@@ -78,6 +70,18 @@ window.ELIA = {
 
   // Galeri öğeleri. tur: "foto" veya "video". video için "poster" de verilir.
   galeri: [
+    // Müşterinin gerçek çekimleri (drone, 6 Eyl 2026)
+    { tur: "foto", kategori: "dugun", src: "medya/galeri/gece-genel.jpg", baslik: "Gece, düğün alanı" },
+    { tur: "video", kategori: "bahce", src: "medya/video/gun-batimi-genel.mp4", poster: "medya/poster/gun-batimi-genel.jpg", baslik: "Gün batımında Elia Garden" },
+    { tur: "foto", kategori: "bahce", src: "medya/galeri/kare-dag-manzarasi.jpg", baslik: "Dağ manzarası" },
+    { tur: "video", kategori: "dugun", src: "medya/video/toren-yolu.mp4", poster: "medya/poster/toren-yolu.jpg", baslik: "Tören yolu" },
+    { tur: "foto", kategori: "bahce", src: "medya/galeri/gece-dikey.jpg", baslik: "Kuş bakışı" },
+    { tur: "video", kategori: "dugun", src: "medya/video/gece-davet.mp4", poster: "medya/poster/gece-davet.jpg", baslik: "Gece daveti" },
+    { tur: "foto", kategori: "bahce", src: "medya/galeri/kare-gun-batimi-1.jpg", baslik: "Işıklar yanarken" },
+    { tur: "video", kategori: "bahce", src: "medya/video/alan-yukaridan.mp4", poster: "medya/poster/alan-yukaridan.jpg", baslik: "Alan yukarıdan" },
+    { tur: "foto", kategori: "dugun", src: "medya/galeri/kare-gun-batimi-2.jpg", baslik: "Akşam üstü" },
+    { tur: "video", kategori: "dugun", src: "medya/video/gece-kus-bakisi.mp4", poster: "medya/poster/gece-kus-bakisi.jpg", baslik: "Gece kuş bakışı" },
+    // Yer tutucular (Unsplash/Mixkit) — müşterinin kına/nişan/sünnet çekimleri gelince silinecek
     { tur: "foto", kategori: "dugun", src: U("1764269715677-a80bda133ff7"), baslik: "Gelin & damat ilk dansı" },
     { tur: "foto", kategori: "bahce", src: U("1523438885200-e635ba2c371e"), baslik: "Bahçeden bir köşe" },
     { tur: "video", kategori: "dugun", src: MK(40601), poster: MKP(40601), baslik: "Düğün anları" },
@@ -101,11 +105,11 @@ window.ELIA = {
   // Video bölümü. İlki büyük gösterilir.
   videolar: [
     // "sure" isteğe bağlı, örn. sure: "1:20"
-    { src: MK(40627), poster: MKP(40627), baslik: "Elia Garden'da bir düğün gecesi" },
-    { src: MK(40596), poster: MKP(40596), baslik: "Bahçede yürüyüş" },
-    { src: MK(5213), poster: MKP(5213), baslik: "Işık ve dekor" },
-    { src: MK(40590), poster: MKP(40590), baslik: "Bahçe I" },
-    { src: MK(40584), poster: MKP(40584), baslik: "Bahçe II" },
+    { src: "medya/video/gun-batimi-genel.mp4", poster: "medya/poster/gun-batimi-genel.jpg", baslik: "Gün batımında Elia Garden", sure: "0:18" },
+    { src: "medya/video/alan-yukaridan.mp4", poster: "medya/poster/alan-yukaridan.jpg", baslik: "Alan yukarıdan", sure: "0:13" },
+    { src: "medya/video/toren-yolu.mp4", poster: "medya/poster/toren-yolu.jpg", baslik: "Tören yolu", sure: "0:04" },
+    { src: "medya/video/gece-davet.mp4", poster: "medya/poster/gece-davet.jpg", baslik: "Gece daveti", sure: "0:01" },
+    { src: "medya/video/gece-kus-bakisi.mp4", poster: "medya/poster/gece-kus-bakisi.jpg", baslik: "Gece kuş bakışı", sure: "0:02" },
   ],
 
   // Google Haritalar'daki gerçek yorumlardan (baş harflerle).
@@ -117,11 +121,11 @@ window.ELIA = {
 
   // Instagram şeridi (şimdilik galeriden görseller; tıklayınca hesaba gider).
   instagramGorselleri: [
-    U("1769230387364-8b0c2b63e18b", 600),
-    U("1764593821636-0b40b6ec25e6", 600),
-    U("1574482211311-45a2169db57c", 600),
-    U("1768611873658-5f041a413341", 600),
-    U("1533120921505-7f40f5237ee1", 600),
-    U("1712764995301-995e730b6147", 600),
+    "medya/galeri/gece-genel.jpg",
+    "medya/galeri/kare-toren-kemerleri.jpg",
+    "medya/galeri/kare-dag-manzarasi.jpg",
+    "medya/galeri/gece-dikey.jpg",
+    "medya/galeri/kare-gun-batimi-1.jpg",
+    "medya/poster/gece-kus-bakisi.jpg",
   ],
 };

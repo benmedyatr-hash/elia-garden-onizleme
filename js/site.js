@@ -54,12 +54,12 @@
         ${b.video ? OYNAT : ""}
       </button>
       <div>
-        <div class="bahce__no">0${i + 1}</div>
+        ${V.bahceler.length > 1 ? `<div class="bahce__no">0${i + 1}</div>` : ""}
         <p class="bahce__etiket">${kacis(b.etiket)}</p>
         <h3>${kacis(b.ad)}</h3>
         <p>${kacis(b.metin)}</p>
         <ul>${b.ozellikler.map((o) => `<li>${kacis(o)}</li>`).join("")}</ul>
-        <a class="dugme dugme--cizgi" href="${waLink(`Merhaba, ${b.ad} için tarih ve fiyat bilgisi almak istiyorum.`)}" target="_blank" rel="noopener">Bu Bahçe İçin Tarih Sor</a>
+        <a class="dugme dugme--cizgi" href="${waLink(`Merhaba, ${b.ad} için tarih ve fiyat bilgisi almak istiyorum.`)}" target="_blank" rel="noopener">${V.bahceler.length > 1 ? "Bu Bahçe İçin Tarih Sor" : "Tarih Sor"}</a>
       </div>`;
     const medya = $(".bahce__medya", el);
     onizleme(medya, b.video);
