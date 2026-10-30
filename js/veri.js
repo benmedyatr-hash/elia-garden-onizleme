@@ -16,7 +16,7 @@ const MKP = (id) => `https://assets.mixkit.co/videos/${id}/${id}-thumb-720-0.jpg
 
 window.ELIA = {
   iletisim: {
-    ad: "Elia Garden Kır Bahçesi",
+    ad: "Elia Garden Kır Bahçesi Düğün Alanı",
     telefonGorunen: "0533 085 49 47",
     telefon: "+905330854947",
     whatsapp: "905330854947",
