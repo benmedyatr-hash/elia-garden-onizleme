@@ -255,7 +255,7 @@ svg { fill: currentColor; }
 .bilgi-listesi { list-style: none; padding: 0; margin: 0 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .bilgi-listesi li { display: grid; gap: 2px; font-size: 1rem; }
 .bilgi-listesi__baslik { font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--altin-koyu); }
-.bilgi-listesi a { font-weight: 400; border-bottom: 1px solid transparent; justify-self: start; transition: border-color .3s; }
+.bilgi-listesi a { font-weight: 400; border-bottom: 1px solid transparent; justify-self: start; transition: border-color .3s; overflow-wrap: anywhere; }
 .bilgi-listesi a:hover { border-color: var(--altin-koyu); }
 .harita { aspect-ratio: 4 / 3; border-radius: var(--yaricap); overflow: hidden; margin-bottom: 16px; background: var(--krem); }
 .harita iframe { width: 100%; height: 100%; border: 0; filter: grayscale(.3) sepia(.15); }
@@ -265,8 +265,9 @@ svg { fill: currentColor; }
 .altbilgi__ic { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; padding-bottom: 60px; }
 .altbilgi__not { color: rgba(246, 241, 231, .6); max-width: 340px; margin-top: 20px; }
 .altbilgi h3 { font-family: var(--sans); font-size: .75rem; font-weight: 500; letter-spacing: .24em; text-transform: uppercase; color: var(--altin); margin-bottom: 18px; }
-.altbilgi__ic > div:not(:first-child) a { display: block; padding: 4px 0; color: rgba(246, 241, 231, .75); transition: color .3s; }
+.altbilgi__ic > div:not(:first-child) a { display: block; padding: 4px 0; color: rgba(246, 241, 231, .75); transition: color .3s; overflow-wrap: anywhere; }
 .altbilgi__ic a:hover { color: var(--altin); }
+.altbilgi__ic .altbilgi__eposta { font-size: .875rem; }
 .altbilgi__telif { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; padding: 22px 0; border-top: 1px solid rgba(246, 241, 231, .12); font-size: .8rem; color: rgba(246, 241, 231, .5); }
 
 /* Yan düğmeler / mobil çubuk */

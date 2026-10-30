@@ -20,6 +20,7 @@ window.ELIA = {
     telefonGorunen: "0533 085 49 47",
     telefon: "+905330854947",
     whatsapp: "905330854947",
+    eposta: "info@eliagardenevents.com",
     whatsappMesaj: "Merhaba, Elia Garden'da organizasyon için tarih ve fiyat bilgisi almak istiyorum.",
     adres: "Emirler, Atatürk 5 Caddesi No:102/D",
     ilce: "33112 Yenişehir / Mersin",

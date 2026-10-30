@@ -12,6 +12,7 @@
   const linkler = {
     tel: `tel:${V.iletisim.telefon}`,
     whatsapp: waLink(V.iletisim.whatsappMesaj),
+    eposta: `mailto:${V.iletisim.eposta}`,
     instagram: V.iletisim.instagramUrl,
     harita: V.iletisim.haritaUrl,
     yolTarifi: V.iletisim.yolTarifiUrl,
